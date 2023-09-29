@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tree_style.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .container {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .tree {
+            width: 100%; /* Adjust the width as needed */
+            white-space: nowrap;
+        }
+
+        /* Add your CSS styles here */
+    </style>
+    <script>
+        let currentScale = 1.0;
+
+        function zoomIn() {
+            currentScale += 0.1;
+            applyZoom();
+        }
+
+        function zoomOut() {
+            currentScale -= 0.1;
+            applyZoom();
+        }
+
+        function applyZoom() {
+            document.querySelector('.tree').style.transform = `scale(${currentScale})`;
+        }
+    </script>
+    <title>Family Tree</title>
+</head>
+<body class="content">
+
+  <div class="navbar">
+    <ul>
+      <li><a href="..\index.html">Story</a></li>
+      <li><a href="..\documents.html">Documents</a></li>
+      <li class="active"><a href="tree_index.html">Wiesen Tree</a></li>
+      <li><a href="..\map.html">Map</a></li>
+      <li><a href="..\resources.html">Resources</a></li>
+    </ul>
+  </div>
+
+      <div class="tree-zoom-buttons">
+          <button onclick="zoomIn()">+</button>
+          <button onclick="zoomOut()">-</button>
+      </div>
+      <div class="tree">
+        <ul>
+            <li>
+                <div class="member male">
+                    <div class="profile">
+                        <img src="unknown.png" alt="Tzvi Rosenblüth">
+                    </div>
+                    <div class="name">Tzvi/Hirsch Rosenblüth</div>
+                </div>
+                <div class="member female spouse">
+                    <div class="profile">
+                        <img src="unknown.png" alt="Miriam Rosenblüth">
+                    </div>
+                    <div class="name">Miriam Rosenblüth <br> (House of Goldman)</div>
+                </div> <!-- Spouse -->
+                <ul>
+                    <li>
+                        <div class="member male">
+                            <div class="profile">
+                                <img src="unknown.png" alt="Kaleman Rosenblüth">
+                            </div>
+                            <div class="name">Kaleman Rosenblüth<br>1893-?</div>
+                        </div>
+                        <div class="member female spouse">
+                            <div class="profile">
+                                <img src="unknown.png" alt="Fayge Rosenblüth(House of Friedfertig)">
+                            </div>
+                            <div class="name">Fayge Rosenblüth<br>(House of Friedfertig)<br>1893-?</div>
+                        </div> <!-- Spouse -->
+                        <ul>
+                            <li>
+                                <div class="member male">
+                                    <div class="profile">
+                                        <img src="unknown.png" alt="Joseph Rosenblüth">
+                                    </div>
+                                    <div class="name">Joseph Rosenblüth<br>1918-2001</div>
+                                </div>
+                            </li>
+                            <!-- Add Julius and Samuel here as needed -->
+                            <li>
+                                <div class="member male">
+                                    <div class="profile">
+                                        <img src="unknown.png" alt="Julius Rosenblüth">
+                                    </div>
+                                    <div class="name">Julius Rosenblüth<br>1919-?</div>
+                                </div>
+                            </li>
+
+                              <li>
+                                    <div class="member male">
+                                      <div class="clickable-profile">
+                                        <a href="https://www.archives.gov.il/archives/Archive/0b0717068002258e/File/0b071706856ad65a" target="_blank">
+                                            <img src="images/Samuel_Marcus_Rosenblüth.png" alt="Samuel Marcus Rosenblüth">
+                                        </a>
+                                      </div>
+                                      <div class="name"><a href="https://www.archives.gov.il/archives/Archive/0b0717068002258e/File/0b071706856ad65a" target="_blank"><div class="name">Samuel Marcus<br>Rosenblüth<br>1921-?</div></a></div>
+                              </li>
+                              <li>
+                                <div class="member male">
+                                    <div class="profile">
+                                        <img src="unknown.png" alt="Mischal Rosenblüth">
+                                    </div>
+                                    <div class="name">Mischal Rosenblüth<br>1922-1977</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="member male">
+                                    <div class="profile">
+                                        <img src="unknown.png" alt="Adolf Rosenblüth">
+                                    </div>
+                                    <div class="name">Adolf Rosenblüth<br>1924-1926</div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="member female">
+                                    <div class="profile">
+                                        <img src="unknown.png" alt="Fuschel Rosenblüth">
+                                    </div>
+                                    <div class="name">Fuschel Rosenblüth<br>1927-1928</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="member female">
+                                    <div class="profile">
+                                        <img src="unknown.png" alt="Sara Regev Rosenblüth">
+                                    </div>
+                                    <div class="name">Sara Regev<br> house of Rosenblüth<br>1928-?</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="member female">
+                                    <div class="profile">
+                                        <img src="unknown.png" alt="Regina Rosenblüth">
+                                    </div>
+                                    <div class="name">Regina Rebecca Rosenblüth<br>1932-?</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="member female">
+                            <div class="profile">
+                                <img src="unknown.png" alt="Lea">
+                            </div>
+                            <div class="name">Lea Wiesen</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="member female">
+                            <div class="profile">
+                                <img src="unknown.png" alt="Serel Rosenblüth">
+                            </div>
+                            <div class="name">Serel Wiesen</div>
+                        </div>
+                    </li>
+                    <li>
+
+
+                        <div class="member female">
+                          <div class="clickable-profile">
+                            <a href="../index.html">
+                                <img src="images/Chana_Met.png" alt="Chana Met(House of Wiesen)">
+                            </a>
+                          </div>
+                          <div class="name">
+                            <a href="../index.html">
+                                <div class="name">
+                                  Chana Met<br>(House of Wiesen)<br>1900-1975
+                               </div>
+                            </a>
+                          </div>
+                      </div>
+
+
+
+                        <div class="member male spouse">
+                            <div class="profile">
+                                <img src="unknown.png" alt="Moisze Met">
+                            </div>
+                            <div class="name">Moisze Met<br>1899</div>
+                        </div> <!-- Spouse -->
+                        <div class="member male spouse">
+                            <div class="clickable-profile">
+                              <a href="https://he.wikipedia.org/wiki/%D7%99%D7%A2%D7%A7%D7%91_%D7%A0%D7%AA%D7%A0%D7%90%D7%9C%D7%99-%D7%A8%D7%95%D7%AA%D7%9E%D7%9F" target="_blank">
+                                  <img src="unknown.png" alt="Jacob Rothman">
+                              </a>
+                            </div>
+                            <div class="name">
+                              <a href="https://he.wikipedia.org/wiki/%D7%99%D7%A2%D7%A7%D7%91_%D7%A0%D7%AA%D7%A0%D7%90%D7%9C%D7%99-%D7%A8%D7%95%D7%AA%D7%9E%D7%9F" target="_blank">
+                                Jacob Rothman
+                                <br>
+                                1892-1962
+                              </a></div>
+                        </div> <!-- Spouse -->
+                        <ul>
+                            <li>
+                                <div class="member female">
+                                    <div class="profile">
+                                        <img src="images/Sonja_Kagan.png" alt="Sonja Kagan(House of Met)">
+                                    </div>
+                                    <div class="name">Sonja Kagan<br>(House of Met)<br>1928-1997</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="member female">
+                                    <div class="profile">
+                                        <img src="unknown.png" alt="Vera Met">
+                                    </div>
+                                    <div class="name">Vera Met<br>1931-1935</div>
+                                </div>
+                            </li>
+                            <li>
+                              <ul>
+  <!-- ... (previous family members) ... -->
+  <li>
+      <div class="member female">
+          <div class="profile">
+              <img src="images/Ruth_Kirshenboim.png" alt="Ruth Kirshenboim">
+          </div>
+          <div class= "name">Ruth Kirshenbom<br>(House of Met)<br>1932-1993</div>
+      </div>
+      <div class="member male spouse">
+          <div class="profile">
+              <img src="images/Yehuda_Kirshenboim.png" alt="Yehuda Korishenboim">
+          </div>
+          <div class="name">Yehuda Korishenboim<br>1928-2022</div>
+      </div> <!-- Spouse -->
+      <ul>
+          <li>
+              <div class="member male">
+                  <div class="profile">
+                      <img src="unknown.png" alt="Ran Kirshenboim">
+                  </div>
+                  <div class="name">Ran Kirshenboim<br>1952-1953</div>
+              </div>
+          </li>
+          <li>
+              <div class="member male">
+                  <div class="profile">
+                      <img src="images/Zvi_Kirshenboim.png" alt="Zvi Kirshenboim">
+                  </div>
+                  <div class="name">Zvi Kirshenboim<br>1952-Alive</div>
+              </div>
+          </li>
+          <li>
+              <div class="member male">
+                  <div class="profile">
+                      <img src="images/Arie_Koren.png" alt="Arie Koren">
+                  </div>
+                  <div class="name">Arie Koren<br>1959-Alive</div>
+              </div>
+          </li>
+      </ul>
+  </li>
+</ul>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+  <script src="tree_script.js"></script>
+</body>
+</html>
