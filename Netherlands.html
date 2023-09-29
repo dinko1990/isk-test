@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document 1</title>
+    <!-- Include your CSS files here -->
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include your custom JavaScript file -->
+    <script src="slider.js"></script>
+    <!-- Include your CSS for the navigation bar -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="slider.css">
+</head>
+<body class="content">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Story</a></li>
+          <li class="active"><a href="documents.html">Documents</a></li>
+          <li><a href="family_tree_V.1.4\tree_index.html">Wiesen Tree</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="resources.html">Resources</a></li>
+
+
+        </ul>
+    </nav>
+    <container class="float_btn">
+        <button id="zoomInButton">+</button>
+        <button id="zoomOutButton">-</button>
+    </container>
+
+
+
+    <div id="img_slider">
+      <h2 class="documents_title">The Netherlands</h2>
+      <div id="small_image">
+        <img src="Images\The Netherlands\Dutch_Family_Card.png" alt="1" />
+        <img src="Images\The Netherlands\Rosenbluth.jpg" alt="1" />
+
+
+      </div>
+      <div id="big_image">
+        <img src="Images\The Netherlands\Dutch_Family_Card.png" alt="1"  id="zoomed_image"/>
+      </div>
+    </div>
+
+
+</div>
+</body>
+</html>

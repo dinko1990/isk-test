@@ -1,0 +1,105 @@
+
+body {
+  background: #808080;
+}
+
+#big_image img {
+  border-radius: 10px;
+  width:600px;
+  height:100%;
+  object-fit: cover;
+  padding-top: 5px;
+}
+
+#img_slider {
+  text-align: center;
+}
+
+#small_image {
+  height:150px;
+  width: 100%;
+  z-index: 10;
+}
+
+#small_image img:first-child {
+  border-radius: 10px 0 0 10px;
+  z-index: 10;
+
+}
+
+#small_image img {
+  border-radius: 10px;
+  width:150px;
+  height:150px;
+  object-fit: cover;
+  z-index: 10;
+
+
+}
+
+#small_image img:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.1); /* Scale up to 110% on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Add a dark box shadow on hover */
+  z-index: 10;
+
+}
+
+
+#small_image img:last-child {
+  border-radius: 0 10px 10px 0;
+  z-index: 10;
+
+}
+
+
+#zoomInButton , #zoomOutButton {
+  background-color: rgba(0, 123, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 40px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px; /* Add margin to separate buttons */
+  transition: color 0.3s, font-size 0.3s;
+}
+
+
+
+#zoomInButton:hover, #zoomOutButton:hover {
+  color: #fff;
+  font-size: 50px;
+}
+
+#zoomInButton:focus, #zoomOutButton:focus {
+  outline: none;
+}
+
+
+.float_btn {
+  position: fixed;
+  bottom: 50%; /* Adjust the distance from the bottom as needed */
+  left: 5%; /* Adjust the distance from the right as needed */
+  color: #fff; /* Button text color */
+  width: 60px; /* Button width */
+  height: 60px; /* Button height */
+  border: none;
+  border-radius: 50%; /* Make it circular */
+  font-size: 24px; /* Button font size */
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  z-index: 1000; /* Ensure it appears above other content */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.float_btn:hover {
+  background-color: #0056b3; /* Button background color on hover */
+  transform: scale(1.05); /* Add a slight scale effect on hover */
+}
+
+.float_btn:focus {
+  outline: none; /* Remove the default focus outline */
+}

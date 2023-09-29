@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document 1</title>
+    <!-- Include your CSS files here -->
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include your custom JavaScript file -->
+    <script src="slider.js"></script>
+    <!-- Include your CSS for the navigation bar -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="slider.css">
+</head>
+<body class="content">
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <ul>
+          <li><a href="index.html">Story</a></li>
+          <li class="active"><a href="documents.html">Documents</a></li>
+          <li><a href="family_tree_V.1.4\tree_index.html">Wiesen Tree</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="resources.html">Resources</a></li>
+        </ul>
+
+    </div>
+    <container class="float_btn">
+        <button id="zoomInButton">+</button>
+        <button id="zoomOutButton">-</button>
+    </container>
+
+    <div id="img_slider">
+      <h2 class="documents_title">Israel</h2>
+      <div id="small_image">
+        <img src="Images\Israel\Chana_Death_Certification1.jpg" alt="1"/>
+        <img src="Images\Israel\Ruth_Death_Certification1.jpg" alt="2" />
+        <img src="Images\Israel\Sonja_Death_Certification1.jpg" alt="3" />
+        <img src="Images\Israel\Vera_burried.jpg" alt="test" />
+        <img src="Images\Israel\Arztliches_GutachtenA.jpg" alt="test" />
+        <img src="Images\Israel\Arztliches_GutachtenB.jpg" alt="test" />
+
+      </div>
+
+      <div id="big_image">
+        <img src="Images\Israel\Vera_burried.jpg" alt="test"  id="zoomed_image"/>
+
+      </div>
+    </div>
+
+
+</div>
+</body>
+</html>

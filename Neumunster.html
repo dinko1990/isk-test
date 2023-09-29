@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document 1</title>
+    <!-- Include your CSS files here -->
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Include your custom JavaScript file -->
+    <script src="slider.js"></script>
+    <!-- Include your CSS for the navigation bar -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="slider.css">
+</head>
+<body class="content">
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <ul>
+          <li><a href="index.html">Story</a></li>
+          <li class="active"><a href="documents.html">Documents</a></li>
+          <li><a href="family_tree_V.1.4\tree_index.html">Wiesen Tree</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="resources.html">Resources</a></li>
+
+        </ul>
+    </div>
+    <container class="float_btn">
+        <button id="zoomInButton">+</button>
+        <button id="zoomOutButton">-</button>
+    </container>
+
+
+
+    <div id="img_slider">
+      <h2 class="documents_title">Neumunster</h2>
+      <div id="small_image">
+        <img src="Images\Neumunster\Chana_Bussiness_address.jpg" alt="test" />
+        <img src="Images\Neumunster\Chana_tax_payments.jpg" alt="test" />
+        <img src="Images\Neumunster\Chana_companies_list.jpg" alt="test" />
+        <img src="Images\Neumunster\Marriage_certificate.jpg" alt="test" />
+        <img src="Images\Neumunster\Sonja_Birth_Certification1.jpg" alt="test" />
+        <img src="Images\Neumunster\Vera_Birth_Certification1.jpg" alt="test" />
+      <!--  <img src="Images\Neumunster\Lea_Wiesen_2.jpg" alt="test" /> -->
+        <img src="Images\Neumunster\Chana_Neumunster_card1.jpg" alt="test" />
+
+
+      </div>
+      <div id="big_image">
+        <img src="Images\Neumunster\Chana_Neumunster_card1.jpg" alt="test"  id="zoomed_image"/>
+      </div>
+    </div>
+</div>
+</body>
+</html>
