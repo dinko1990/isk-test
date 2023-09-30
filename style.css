@@ -163,6 +163,19 @@
   font-weight: normal;
 }
 
+/* Image and title hover effect */
+.timeline__img,
+.timeline__content-title {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.timeline-item:hover .timeline__img,
+.timeline-item:hover .timeline__content-title {
+  transition: transform 0.3s ease;
+  transform: scale(1.1);
+}
+
 
 /* Demo footer styles */
 .demo-footer {
