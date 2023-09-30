@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Cardo|Pathway+Gothic+One");
-
 /* Global timeline styles */
 .timeline {
   display: flex;
@@ -9,7 +8,6 @@
   max-width: 700px;
   position: relative;
 }
-
 
 .timeline__content-title {
   font-weight: normal;
@@ -59,14 +57,13 @@
 /* Individual timeline item styles */
 .timeline-item {
   padding: 40px 0;
-  opacity: 0.3;
-  filter: blur(2px);
-  transition: 0.5s;
+  opacity: 1; /* Adjusted opacity to keep items visible */
+  filter: blur(0px); /* Removed blur filter */
   box-sizing: border-box;
   width: calc(50% - 40px);
   display: flex;
   position: relative;
-  transform: translateY(-80px);
+  transform: translateY(0); /* Removed translateY transformation */
   z-index: 0;
 }
 
@@ -102,7 +99,7 @@
 
 .timeline-item--active {
   opacity: 1;
-  transform: translateY(0);
+  /* Removed translateY transformation */
   filter: blur(0px);
 }
 
@@ -111,20 +108,6 @@
   transition: 0.3s all 0.2s;
   opacity: 1;
 }
-
-/* Image and title hover effect */
-.timeline__img,
-.timeline__content-title {
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.timeline-item:hover .timeline__img,
-.timeline-item:hover .timeline__content-title {
-  transition: transform 0.3s ease;
-  transform: scale(1.1);
-}
-
 
 /* Image styles */
 .timeline__img {
@@ -179,6 +162,7 @@
   margin: 10px 0 0 0;
   font-weight: normal;
 }
+
 
 /* Demo footer styles */
 .demo-footer {
@@ -438,7 +422,7 @@ body {
 .document-image img{
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Add a dark box shadow on hover */
- 
+
 }
 
 .document-content:hover {
