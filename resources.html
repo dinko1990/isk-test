@@ -1,142 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Chana Wiesen- Resouces</title>
-    <!-- Include your CSS files here -->
-    <!-- Include jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Include your custom JavaScript file -->
-    <script src="slider.js"></script>
-    <!-- Include your CSS for the navigation bar -->
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chana Wiesen – Resources</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    .resources-body {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 100px 20px 60px;
+      font-family: Cardo, serif;
+      color: #eee;
+    }
+    .resources-body h2 { font-family: "Pathway Gothic One", sans-serif; font-weight: normal; font-size: clamp(20px, 5vw, 30px); color: #fff; margin-top: 2em; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 6px; }
+    .resources-body h2.page-title { font-size: clamp(32px, 8vw, 55px); color: #555; text-align: center; margin-top: 0; border: none; }
+    .resources-body nav ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
+    .resources-body nav ul li a { font-family: "Pathway Gothic One", sans-serif; color: #ccc; font-size: 17px; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 2px; transition: color 0.2s; }
+    .resources-body nav ul li a:hover { color: #fff; }
+    .resources-body p { margin: 1.2em 0 0.4em; font-weight: bold; color: #ddd; }
+    .resources-body ul { margin: 0 0 1em; padding-left: 20px; }
+    .resources-body ul li { margin-bottom: 6px; line-height: 1.5; font-size: 15px; }
+    .resources-body a { color: #a8c8e8; text-decoration: none; }
+    .resources-body a:hover { text-decoration: underline; }
+    footer { text-align: center; padding: 20px; color: rgba(255,255,255,0.4); font-family: Cardo, serif; font-size: 14px; }
+  </style>
 </head>
 <body class="content">
-    <!-- Navigation Bar -->
-    <div class="navbar">
-        <ul>
-          <li><a href="index.html">Story</a></li>
-          <li><a href="documents.html">Documents</a></li>
-          <li><a href="family_tree_V.1.4\tree_index.html">Wiesen Tree</a></li>
-          <li><a href="map.html">Map</a></li>
-          <li class="active"><a href="resources.html">Resources</a></li>
-        </ul>
-    </div>
 
+  <nav class="navbar" id="mainNav">
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <ul>
+      <li><a href="index.html">Story</a></li>
+      <li><a href="documents.html">Documents</a></li>
+      <li><a href="family_tree_V.1.4/tree_index.html">Wiesen Tree</a></li>
+      <li><a href="map.html">Map</a></li>
+      <li class="active"><a href="resources.html">Resources</a></li>
+    </ul>
+  </nav>
 
-    <header>
-        <h2 class="documents_title">Resources</h2>
-
-    </header>
+  <div class="resources-body">
+    <h2 class="page-title">Resources</h2>
 
     <nav>
-        <ul>
-            <li class="document-title"><a href="#section1">Section 1: Met Family</a></li>
-            <li class="document-title"><a href="#section2">Section 2: Rosenblüth Family</a></li>
-            <li class="document-title"><a href="#section3">Section 3: General</a></li>
-        </ul>
+      <ul>
+        <li><a href="#section1">Met Family</a></li>
+        <li><a href="#section2">Rosenblüth Family</a></li>
+        <li><a href="#section3">General</a></li>
+      </ul>
     </nav>
 
-    <main>
-        <section id="section1">
-            <h2>Section 1:  Met Family resources</h2>
-            <p>Hamburg:</p>
-            <ul>
-                <li>Chana, Lea and Serel Hamburg residence cards- christine.heitmann@bkm.hamburg.de. sent via Email</‏li>
-            </ul>
-            
-            <p>Neumünster:</p>
-            <ul>
-                <li><a href="https://collections.arolsen-archives.org/en/document/70702722" target="_blank">Neumünster Residence card</a></li>
-                <li>Birth certifications- Gabriele.Kaulitzki@neumuenster.de. sent via mail</li>
-                <li> <a href="https://drive.google.com/file/d/1ntReeUe7HlkJPIo0MV-eg_zxjpOiQOft/view?usp=sharing" target="_blank">Restitution Documents</a>- ebastian.Grigo@lav.nrw.de. sent via Email</‏li>
-                <li>Compaies registration and taxes- from restitution documents</li>
+    <section id="section1">
+      <h2>Section 1: Met Family Resources</h2>
 
-            </ul>
+      <p>Hamburg:</p>
+      <ul>
+        <li>Chana, Lea and Serel Hamburg residence cards – <a href="mailto:christine.heitmann@bkm.hamburg.de">christine.heitmann@bkm.hamburg.de</a> (sent via Email)</li>
+      </ul>
 
-            <p>Wismar:</p>
-            <ul>
-                <li>Chana and Moses marriage document- from restitution documents</li>
-                <li>Lea Wiesen and Herman Schönfeld- Wismar archive. NJoern@wismar.de and falk.bersch@freenet.de via Email</li>
-                <li>Etla Bitner Chana's cousin <a href="https://docs.google.com/document/d/1bWg03bmNSFh3-vk3ghQ9dnDLvN9aFgww/edit?usp=sharing&ouid=102175621139578601321&rtpof=true&sd=true" target="_blank">Story</a> and Reciept of <a href="https://drive.google.com/file/d/1vJ8ZNUPFxacBu3effjJjv593JB7GGvPg/view?usp=drive_link" target="_blank">restitution</a>. falk.bersch@freenet.de via Email</li>
-            </ul>
-            <p>The Netherlands:</p>
-            <ul>
-              <li><a href="https://www.wiewaswie.nl/nl/detail/print/107054480" target="_blank">Met dutch family card</a></li>
-            </ul>
+      <p>Neumünster:</p>
+      <ul>
+        <li><a href="https://collections.arolsen-archives.org/en/document/70702722" target="_blank">Neumünster Residence card</a></li>
+        <li>Birth certifications – <a href="mailto:Gabriele.Kaulitzki@neumuenster.de">Gabriele.Kaulitzki@neumuenster.de</a> (sent via mail)</li>
+        <li><a href="https://drive.google.com/file/d/1ntReeUe7HlkJPIo0MV-eg_zxjpOiQOft/view?usp=sharing" target="_blank">Restitution Documents</a> – <a href="mailto:sebastian.Grigo@lav.nrw.de">sebastian.Grigo@lav.nrw.de</a> (sent via Email)</li>
+        <li>Companies registration and taxes – from restitution documents</li>
+      </ul>
 
-            <p>Palestine/Israel:</p>
-            <ul>
-              <li><a href="https://www.archives.gov.il/archives/Archive/0b0717068001a9a2/File/0b071706806c7f47"target="_blank"> SS Tel Aviv passenger list. Page:87. Rows: 25-28</a></li>
-              <li><a href="https://www.wikiwand.com/he/%D7%AA%D7%9C_%D7%90%D7%91%D7%99%D7%91_(%D7%90%D7%95%D7%A0%D7%99%D7%99%D7%94)" target="_blank">S.S Tel Aviv</a></li>
-              <li><a href="https://www.virtualjudaica.com/Listing/Details/642428/Lunch-Menu-SS-Tel-Aviv-Bremerhaven-to-Haifa-1935" target="_blank">S.S Tel Aviv- Lunch menu</a></li>
-              <li>Immigration certification Jewish agency- from restitution documents</li>
-              <li>Arztliches Gutachten 1969- from Ministry of Finance, state of Israel. via Email Opc@mof.gov.il from Avi</li>
-              <li>Jewish faith approval- from restitution documents</li>
-              <li><a href="https://he.wikipedia.org/wiki/%D7%99%D7%A2%D7%A7%D7%91_%D7%A0%D7%AA%D7%A0%D7%90%D7%9C%D7%99-%D7%A8%D7%95%D7%AA%D7%9E%D7%9F" target="_blank">Jacob Rothman- Chana second hasbund</a></li>
-              <li>Vera Buried certification- Chevra kadisha via Email from Esti_P@kadisha.biz</li>
+      <p>Wismar:</p>
+      <ul>
+        <li>Chana and Moses marriage document – from restitution documents</li>
+        <li>Lea Wiesen and Herman Schönfeld – Wismar archive. <a href="mailto:NJoern@wismar.de">NJoern@wismar.de</a> and <a href="mailto:falk.bersch@freenet.de">falk.bersch@freenet.de</a> via Email</li>
+        <li>Etla Bitner Chana's cousin – <a href="https://docs.google.com/document/d/1bWg03bmNSFh3-vk3ghQ9dnDLvN9aFgww/edit?usp=sharing&ouid=102175621139578601321&rtpof=true&sd=true" target="_blank">Story</a> and Receipt of <a href="https://drive.google.com/file/d/1vJ8ZNUPFxacBu3effjJjv593JB7GGvPg/view?usp=drive_link" target="_blank">restitution</a> – <a href="mailto:falk.bersch@freenet.de">falk.bersch@freenet.de</a> via Email</li>
+      </ul>
 
+      <p>The Netherlands:</p>
+      <ul>
+        <li><a href="https://www.wiewaswie.nl/nl/detail/print/107054480" target="_blank">Met dutch family card</a></li>
+      </ul>
 
-            </ul>
-        </section>
+      <p>Palestine / Israel:</p>
+      <ul>
+        <li><a href="https://www.archives.gov.il/archives/Archive/0b0717068001a9a2/File/0b071706806c7f47" target="_blank">SS Tel Aviv passenger list – Page 87, Rows 25–28</a></li>
+        <li><a href="https://www.wikiwand.com/he/%D7%AA%D7%9C_%D7%90%D7%91%D7%99%D7%91_(%D7%90%D7%95%D7%A0%D7%99%D7%99%D7%94)" target="_blank">S.S Tel Aviv</a></li>
+        <li><a href="https://www.virtualjudaica.com/Listing/Details/642428/Lunch-Menu-SS-Tel-Aviv-Bremerhaven-to-Haifa-1935" target="_blank">S.S Tel Aviv – Lunch menu</a></li>
+        <li>Immigration certification Jewish agency – from restitution documents</li>
+        <li>Arztliches Gutachten 1969 – from Ministry of Finance, State of Israel. via Email <a href="mailto:Opc@mof.gov.il">Opc@mof.gov.il</a></li>
+        <li>Jewish faith approval – from restitution documents</li>
+        <li><a href="https://he.wikipedia.org/wiki/%D7%99%D7%A2%D7%A7%D7%91_%D7%A0%D7%AA%D7%A0%D7%90%D7%9C%D7%99-%D7%A8%D7%95%D7%AA%D7%9E%D7%9F" target="_blank">Jacob Rothman – Chana's second husband</a></li>
+        <li>Vera burial certification – Chevra Kadisha via Email <a href="mailto:Esti_P@kadisha.biz">Esti_P@kadisha.biz</a></li>
+      </ul>
+    </section>
 
-        <section id="section2">
-            <h2>Section 2: Rosenblüth Family resources</h2>
+    <section id="section2">
+      <h2>Section 2: Rosenblüth Family Resources</h2>
 
-            <p>The Netherlands:</p>
-            <ul>
-              <li><a href="https://www.wiewaswie.nl/en/detail/98851842" target="_blank">Kelman and Feige Rosenblüth Marriage certificate</a></li>
-              <li><a href="https://www.wiewaswie.nl/en/detail/106943342" target="_blank">Rosenblüth dutch family card</a></li>
-              <li>Furschel Rosenblüth Certiicate of death. sent via Email from Mr. Joos Fassaert haagsgemeentearchief@denhaag.nl</li>
-              <li><a href="https://www.wiewaswie.nl/nl/detail/98534087" target="_blank">Adolf Rosenblüth Certiicate of death</a></li>
+      <p>The Netherlands:</p>
+      <ul>
+        <li><a href="https://www.wiewaswie.nl/en/detail/98851842" target="_blank">Kelman and Feige Rosenblüth Marriage certificate</a></li>
+        <li><a href="https://www.wiewaswie.nl/en/detail/106943342" target="_blank">Rosenblüth dutch family card</a></li>
+        <li>Furschel Rosenblüth Certificate of death – sent via Email from Mr. Joos Fassaert <a href="mailto:haagsgemeentearchief@denhaag.nl">haagsgemeentearchief@denhaag.nl</a></li>
+        <li><a href="https://www.wiewaswie.nl/nl/detail/98534087" target="_blank">Adolf Rosenblüth Certificate of death</a></li>
+      </ul>
 
+      <p>Palestine / Israel:</p>
+      <ul>
+        <li><a href="https://www.archives.gov.il/archives/Archive/0b0717068001a9a2/File/0b071706806c7f47" target="_blank">SS Tel Aviv passenger list – Page 87, Rows 43–49</a></li>
+        <li><a href="https://www.archives.gov.il/archives/Archive/0b0717068002258e/File/0b071706856ad65a" target="_blank">Samuel Rosenblüth – Israel archive</a></li>
+        <li><a href="https://www.tamarelor.com/images/stories/articles/The_soul_of_the-_Sandal.pdf" target="_blank">Prof. Curator Tamar El Or paper: The Soul of the Biblical Sandal</a></li>
+      </ul>
+    </section>
 
-            </ul>
+    <section id="section3">
+      <h2>Section 3: General Resources</h2>
 
-            <p>Palestine/Israel:</p>
-            <ul>
-              <li><a href="https://www.archives.gov.il/archives/Archive/0b0717068001a9a2/File/0b071706806c7f47" target="_blank">SS Tel Aviv passenger list. Page:87. Rows: 43-49</a></li>
-              <li><a href="https://www.archives.gov.il/archives/Archive/0b0717068002258e/File/0b071706856ad65a" target="_blank">Sasmuel Rosenblüth- Israel archive</a></li>
-              <li><a href="https://www.tamarelor.com/images/stories/articles/The_soul_of_the-_Sandal.pdf" target="_blank">Prof. Curator Tamar El Or paper. The Soul of the Biblical Sandal: On Anthropology and Style</a></li>
-            </ul>
+      <p>Neumünster:</p>
+      <ul>
+        <li><a href="https://www.spurensuche-neumuenster.de/spuren/grossflecken-43" target="_blank">NSDAP in Neumünster</a></li>
+        <li><a href="https://www.spurensuche-neumuenster.de/spuren/grossflecken-51" target="_blank">Großflecken 51 – the Tonhalle</a></li>
+        <li><a href="https://de.wikipedia.org/wiki/Liste_von_Anh%C3%A4ngern_der_NSDAP,_die_zwischen_1923_und_1933_bei_tats%C3%A4chlich_oder_angeblich_politisch_motivierten_Gewalttaten_zu_Tode_kamen" target="_blank">Martin Martens assassination – 11 November 1931</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/July_1932_German_federal_election" target="_blank">July 1932 German federal election</a></li>
+        <li><a href="https://www.spurensuche-neumuenster.de/spuren/lerchenstrasse" target="_blank">Die Straßenschlacht in der Lerchenstraße</a></li>
+        <li><a href="https://www.proquest.com/openview/60112fade9ba2ecce4aad3edeab9fe50/1?pq-origsite=gscholar&cbl=1819272" target="_blank">Schleswig-Holstein – The brown province</a></li>
+      </ul>
 
+      <p>Transportation:</p>
+      <ul>
+        <li><a href="https://www.alamy.com/stock-photo-european-main-railways-old-map-50290249.html" target="_blank">European main railways old map</a></li>
+        <li><a href="https://de.wikipedia.org/wiki/Deutsche_Reichsbahn_(1920%E2%80%931945)" target="_blank">Deutsche Reichsbahn (1920–1945)</a></li>
+      </ul>
 
-        </section>
+      <p>Development:</p>
+      <ul>
+        <li><a href="https://www.bing.com/images/" target="_blank">AI images illustrations</a></li>
+        <li><a href="https://codepen.io/" target="_blank">Code Templates</a></li>
+        <li><a href="https://freefrontend.com/" target="_blank">Design templates</a></li>
+        <li><a href="https://dubverse.ai/" target="_blank">AI narrator tool</a></li>
+      </ul>
+    </section>
+  </div>
 
-        <section id="section3">
-            <h2>Section 3: General Resources</h2>
+  <footer>
+    <p>&copy; 2023 Dean Koren</p>
+  </footer>
 
-            <p>Neumünster:</p>
-            <ul>
-                <li><a href="https://www.spurensuche-neumuenster.de/spuren/grossflecken-43" target="_blank">NSDAP in Neumünster</a></li>
-                <li><a href="https://www.spurensuche-neumuenster.de/spuren/grossflecken-51" target="_blank">grossflecken 51 the Tonhalle</a></li>
-                <li><a href="https://de.wikipedia.org/wiki/Liste_von_Anh%C3%A4ngern_der_NSDAP,_die_zwischen_1923_und_1933_bei_tats%C3%A4chlich_oder_angeblich_politisch_motivierten_Gewalttaten_zu_Tode_kamen" target="_blank">Martin Martens assassination -11 November 1931</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/July_1932_German_federal_election" target="_blank">July 1932 German federal election</a></li>
-                <li><a href="https://www.spurensuche-neumuenster.de/spuren/lerchenstrasse" target="_blank">Die Straßenschlacht in der Lerchenstraße</a></li>
-                <li><a href="https://www.proquest.com/openview/60112fade9ba2ecce4aad3edeab9fe50/1?pq-origsite=gscholar&cbl=1819272" target="_blank">Schleswig-holstein- The brown province-</a></li>
-            </ul>
-
-            <p>Transportation:</p>
-            <ul>
-                <li><a href="https://www.alamy.com/stock-photo-european-main-railways-old-map-50290249.html?imageid=10F67E0F-82B5-4535-91EA-8E9718A6A8E1&p=166829&pn=1&searchId=8f507be31cb08c93b39f2253b19c8f5d&searchtype=0" target="_blank">European main railways old map</a></li>
-                <li><a href="https://de.wikipedia.org/wiki/Deutsche_Reichsbahn_(1920%E2%80%931945)" target="_blank">Deutsche Reichsbahn (1920–1945)</a></li>
-                <li><a href="https://www.proquest.com/openview/60112fade9ba2ecce4aad3edeab9fe50/1?pq-origsite=gscholar&cbl=1819272" target="_blank">Schleswig-holstein- The brown province</a></li>
-            </ul>
-
-            <p>Development:</p>
-            <ul>
-                <li><a href="https://www.bing.com/images/" target="_blank">AI images ilustrations</a></li>
-                <li><a href="https://codepen.io/" target="_blank">Code Templates</a></li>
-                <li><a href="https://freefrontend.com/" target="_blank">Design templates</a></li>
-                <li><a href="https://dubverse.ai/" target="_blank">AI narrator tool</a></li>
-
-            </ul>
-
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2023 Dean Koren</p>
-    </footer>
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function() {
+      document.getElementById('mainNav').classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
