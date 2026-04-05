@@ -1,78 +1,69 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Your JavaScript code here
 
-
-
-$(function() {
-  $('#small_image img').on('click', function() {
+  // ── thumbnail click → swap big image + reset zoom ──
+  $('#small_image img').on('click', function () {
     var url = $(this).attr('src');
-    $('#big_image img').attr('src', url);
-  })
-})
+    var $big = $('#zoomed_image');
+    $big.attr('src', url);
+    // reset zoom
+    currentZoomW = baseW;
+    $big.css('width', currentZoomW + 'px');
+  });
 
-$(function() {
-  // Click event handler for the big image
-  $('#big_image img').on('click', function() {
-    // Get the current image source
-    var currentSrc = $(this).attr('src');
-
-    // Check if the current source contains "_1" in its filename
-    if (currentSrc.includes('1')) {
-      // If it does, remove "_1" from the source to revert to the original image
-      var originalSrc = currentSrc.replace('1', '2');
-      $(this).attr('src', originalSrc);
-
+  // ── big image click → toggle between _1 / _2 versions (translated/original) ──
+  $('#big_image img').on('click', function () {
+    var src = $(this).attr('src');
+    var newSrc;
+    // Only toggle when the filename actually ends in 1.jpg / 2.jpg
+    if (/1\.(jpg|jpeg|png)$/i.test(src)) {
+      newSrc = src.replace(/1(\.(jpg|jpeg|png))$/i, '2$1');
+    } else if (/2\.(jpg|jpeg|png)$/i.test(src)) {
+      newSrc = src.replace(/2(\.(jpg|jpeg|png))$/i, '1$1');
     }
-    if (currentSrc.includes('2')) {
-      // If it does, remove "_1" from the source to revert to the original image
-      var originalSrc = currentSrc.replace('2', '1');
-      $(this).attr('src', originalSrc);
+    if (newSrc) {
+      // check the alt-version actually exists before swapping
+      var img = new Image();
+      img.onload  = function () { $('#zoomed_image').attr('src', newSrc); };
+      img.onerror = function () { /* no alt version — do nothing */ };
+      img.src = newSrc;
     }
   });
 
-$('#big_image img').hover(function() {
-    // Get the current image source
-    var currentSrc = $(this).attr('src');
+  // ── zoom in / out using image width (proper, scrollable) ──
+  var $big  = $('#zoomed_image');
+  var baseW = $big.width() || 600;   // natural rendered width
+  var currentZoomW = baseW;
+  var MIN_W = 200;
+  var MAX_W = 3000;
+  var STEP  = 120;   // px per click
 
-    // Check if the current source contains either '1' or '2' in its filename
-    if (currentSrc.includes('1') || currentSrc.includes('2')) {
-      $(this).css('cursor', 'pointer'); // Change the cursor to pointer when hovering
-      $(this).css('transform', 'scale(1.01)'); // Scale the image up by 107% on hover
-      $(this).css('transition', 'transform 0.3s ease'); // Add the transition
-
-/* Add a dark box shadow on hover */
-
-
-    }
-  }, function() {
-    // Revert the cursor style to the default when not hovering
-    $(this).css('cursor', 'default');
-    $(this).css('transform', 'scale(1)'); // Revert to the original scale
-
+  // update baseW once the image actually loads
+  $big.on('load', function () {
+    baseW = $(this).width();
+    currentZoomW = baseW;
   });
 
-});
+  $('#zoomInButton').on('click', function () {
+    currentZoomW = Math.min(currentZoomW + STEP, MAX_W);
+    $big.css({ width: currentZoomW + 'px', height: 'auto' });
+  });
 
+  $('#zoomOutButton').on('click', function () {
+    currentZoomW = Math.max(currentZoomW - STEP, MIN_W);
+    $big.css({ width: currentZoomW + 'px', height: 'auto' });
+  });
 
-
-// Get references to the image and buttons
-const image = document.getElementById('zoomed_image');
-const zoomInButton = document.getElementById('zoomInButton');
-const zoomOutButton = document.getElementById('zoomOutButton');
-
-// Initial zoom level (1 represents the original size)
-let zoomLevel = 1;
-
-// Function to zoom in
-zoomInButton.addEventListener('click', () => {
-    zoomLevel += 0.1; // Increase the zoom level
-    image.style.transform = `scale(${zoomLevel})`; // Apply the zoom
-});
-
-// Function to zoom out
-zoomOutButton.addEventListener('click', () => {
-    zoomLevel -= 0.1; // Decrease the zoom level
-    image.style.transform = `scale(${zoomLevel})`; // Apply the zoom
-});
+  // ── hamburger nav (used on all pages that include this file) ──
+  var toggle = document.getElementById('navToggle');
+  var nav    = document.getElementById('mainNav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function () {
+      nav.classList.toggle('open');
+    });
+    // close when any link is tapped
+    nav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { nav.classList.remove('open'); });
+    });
+  }
 
 });
